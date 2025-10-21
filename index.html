@@ -1,282 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوميناريا - فصلك القادم ينتظرك</title>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <!-- تحسين تحميل الخطوط -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet"
-        media="print" onload="this.media='all'">
-    <!-- تحسين تحميل Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-</head>
-
-<body>
-    <!-- الهيدر -->
-    <header class="main-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-book-open logo-icon"></i>
-                    <h1>لوميناريا</h1>
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html" class="active">الرئيسية</a></li>
-                        <li><a href="discover.html">اكتشف</a></li>
-                        <li><a href="my_library.html">مكتبتي</a></li>
-                        <li><a href="about.html">عن لوميناريا</a></li>
-                    </ul>
-                </nav>
-                <div class="user-actions">
-                    <a href="account.html" class="btn btn-secondary">تسجيل الدخول</a>
-                    <a href="account.html" class="btn btn-primary">إنشاء حساب</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- الهيرو سيكشن -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h2>اكتشف القصص التي تتحدث إلى روحك</h2>
-                <p>لوميناريا تصل بك إلى عالم من الكتب مخصصة فقط لك. فصلك القادم ينتظرك هنا.</p>
-                <div class="search-container">
-                    <input type="text" id="main-search-input" class="search-input"
-                        placeholder="ابحث عن كتب بالعنوان، المؤلف، أو النوع...">
-                    <button class="search-button" onclick="performMainSearch()">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <div class="search-tags">
-                        <span class="search-tag" data-tag="روايات">روايات</span>
-                        <span class="search-tag" data-tag="تاريخية">تاريخية</span>
-                        <span class="search-tag" data-tag="رومانسية">رومانسية</span>
-                        <span class="search-tag" data-tag="فلسفة">فلسفة</span>
-                        <span class="search-tag" data-tag="تنمية بشرية">تنمية بشرية</span>
-                        <span class="search-tag" data-tag="خيال علمي">خيال علمي</span>
-                        <span class="search-tag" data-tag="بوليسية">بوليسية</span>
-                        <span class="search-tag" data-tag="أدب عالمي">أدب عالمي</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="celestial-orrery">
-        <div class="container">
-            <h2 class="orrery-title">"عوالم الأدب" 📖</h2>
-            <p class="page-subtitle">استكشف عوالم الأدب المختلفة واكتشف نوعك المفضل</p>
-            <div class="genres-grid">
-                <div class="genre-card">
-                    <i class="fas fa-compass genre-icon"></i>
-                    <h3>مغامرات</h3>
-                    <p>رحلات مثيرة وتجارب لا تُنسى</p>
-                </div>
-                <div class="genre-card">
-                    <i class="fas fa-user-secret genre-icon"></i>
-                    <h3>غامض</h3>
-                    <p>ألغاز وأسرار تحبس الأنفاس</p>
-                </div>
-                <div class="genre-card">
-                    <i class="fas fa-chart-line genre-icon"></i>
-                    <h3>تطوير الذات</h3>
-                    <p>رحلة نحو أفضل نسخة من نفسك</p>
-                </div>
-                <div class="genre-card">
-                    <i class="fas fa-book genre-icon"></i>
-                    <h3>روايات</h3>
-                    <p>قصص تأسر القلوب والعقول</p>
-                </div>
-                <div class="genre-card">
-                    <i class="fas fa-landmark genre-icon"></i>
-                    <h3>تاريخ</h3>
-                    <p>استكشف الماضي وتعلم من التاريخ</p>
-                </div>
-                <div class="genre-card">
-                    <i class="fas fa-flask genre-icon"></i>
-                    <h3>علوم</h3>
-                    <p>اكتشف أسرار الكون والطبيعة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- الكتب المميزة -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">الكتب المميزة</h2>
-            <p class="page-subtitle">مجموعة مختارة من أفضل الكتب التي يحبها قراؤنا</p>
-
-            <div class="books-grid" id="featured-books-grid">
-                <!-- سيتم تحميل الكتب هنا بواسطة JavaScript -->
-            </div>
-
-            <div style="text-align: center; margin-top: 48px;">
-                <a href="discover.html" class="btn btn-primary btn-large">
-                    <i class="fas fa-book-open" style="margin-left: 8px;"></i>
-                    عرض المزيد من الكتب
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- إحصائيات المجتمع -->
-    <section class="celestial-orrery">
-        <div class="container">
-            <h2 class="orrery-title">مجتمع لوميناريا</h2>
-            <p class="page-subtitle">انضم إلى آلاف القراء الذين يشاركون شغفهم بالكتب</p>
-            <div class="community-stats">
-                <div class="community-stat">
-                    <div class="stat-number readers">12.5K</div>
-                    <div class="stat-label">قارئ نشط</div>
-                </div>
-                <div class="community-stat">
-                    <div class="stat-number reviews">2.8K</div>
-                    <div class="stat-label">مراجعة كتاب</div>
-                </div>
-                <div class="community-stat">
-                    <div class="stat-number groups">450</div>
-                    <div class="stat-label">مجموعة قراءة</div>
-                </div>
-                <div class="community-stat">
-                    <div class="stat-number events">89</div>
-                    <div class="stat-label">فعالية هذا الشهر</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- دعوة للانضمام -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-section">
-                <h2>مستعد لبدء رحلتك الأدبية؟</h2>
-                <p>انضم إلى لوميناريا اليوم وافتح عالماً من تجارب القراءة المخصصة. اكتشف كتبك المفضلة، تواصل مع قراء
-                    آخرين، وتتبع تقدمك في القراءة.</p>
-                <div class="cta-actions">
-                    <a href="account.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-user-plus" style="margin-left: 8px;"></i>
-                        انضم إلى مجتمع لوميناريا
-                    </a>
-                    <a href="discover.html" class="btn btn-secondary btn-large">
-                        <i class="fas fa-book-open" style="margin-left: 8px;"></i>
-                        تصفح الكتب
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- مميزات لوميناريا -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">لماذا لوميناريا؟</h2>
-            <div class="content-grid">
-                <div class="content-card">
-                    <i class="fas fa-magic card-icon"></i>
-                    <h3 class="card-title">توصيات ذكية</h3>
-                    <p class="card-description">
-                        اكتشف كتابك المفضل التالي مع محرك التوصيات المدعوم بالذكاء الاصطناعي الذي يتعلم من تفضيلاتك
-                        ويقترح عليك الكتب المناسبة لذوقك.
-                    </p>
-                </div>
-
-                <div class="content-card">
-                    <i class="fas fa-users card-icon"></i>
-                    <h3 class="card-title">مجتمع نابض بالحياة</h3>
-                    <p class="card-description">
-                        تواصل مع محبي الكتب الآخرين، انضم إلى مجموعات القراءة، وشارك في النقاشات الأدبية الثرية مع قراء
-                        من جميع أنحاء العالم.
-                    </p>
-                </div>
-
-                <div class="content-card">
-                    <i class="fas fa-chart-line card-icon"></i>
-                    <h3 class="card-title">تتبع تقدمك</h3>
-                    <p class="card-description">
-                        راقب تقدمك في القراءة، ضع أهدافاً شخصية، واحتفل بإنجازاتك الأدبية. احتفظ بسجل شامل لرحلتك مع
-                        الكتب.
-                    </p>
-                </div>
-
-                <div class="content-card">
-                    <i class="fas fa-star card-icon"></i>
-                    <h3 class="card-title">محتوى حصري</h3>
-                    <p class="card-description">
-                        احصل على وصول حصري لمقابلات المؤلفين، نقاشات نوادي الكتب، ومعاينات خاصة للإصدارات الجديدة قبل
-                        الآخرين.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- الفوتر -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>لوميناريا</h4>
-                    <p>ربط القراء بالقصص وتعزيز مجتمع أدبي نابض بالحياة. نحن نؤمن بقوة الكتب في تغيير الحياة وإلهام
-                        العقول.</p>
-                    <div class="social-links">
-                        <a href="www.facebook.com" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                        <a href="x.com" target="_blank" title="تويتر"><i class="fab fa-twitter"></i></a>
-                        <a href="www.instagram.com" target="_blank" title="إنستغرام"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="www.linkedin.com" target="_blank" title="لينكد إن"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>روابط سريعة</h4>
-                    <ul class="footer-links">
-                        <li><a href="discover.html">اكتشف الكتب</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="my_library.html">مكتبتي</a></li>
-                        <li><a href="mailto:luminaria.books@gmail.com?subject=اتصال من موقع لوميناريا"
-                                class="contact-link">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>الدعم</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@luminaria.com?subject=دعم فني" class="contact-link">تواصل معنا</a>
-                        </li>
-                        <li><a href="about.html">معلومات عنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>تابعنا</h4>
-                    <div class="social-links">
-                        <a href="www.facebook.com" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-                        <a href="x.com" target="_blank" title="تويتر"><i class="fab fa-twitter"></i></a>
-                        <a href="www.instagram.com" target="_blank" title="إنستغرام"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 لوميناريا. جميع الحقوق محفوظة. | تصميم: هاشم الوصابي، يوسف الشيباني، محمد الليمة، محمد
-                    العفيف</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- خلفية النجوم -->
-    <div class="stars-container" id="starsContainer"></div>
-
-    <script src="./js/global.js"></script>
-    <script src="./js/index.js"></script>
-</body>
-
-</html>
