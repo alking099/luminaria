@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة غير موجودة - لوميناريا</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/404.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open logo-icon"></i>
+                    <h1>لوميناريا</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="discover.html">اكتشف</a></li>
+                        <li><a href="my_library.html">مكتبتي</a></li>
+                        <li><a href="about.html">عن لوميناريا</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <a href="account.html" class="btn btn-secondary">تسجيل الدخول</a>
+                    <a href="account.html" class="btn btn-primary">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="page-content">
+        <div class="container">
+            <div class="error-container">
+                <!-- النجوم المتحركة -->
+                <div class="floating-stars">
+                    <div class="star star-1"></div>
+                    <div class="star star-2"></div>
+                    <div class="star star-3"></div>
+                    <div class="star star-4"></div>
+                    <div class="star star-5"></div>
+                </div>
+
+                <!-- المحتوى الرئيسي -->
+                <div class="error-content">
+                    <div class="error-animation">
+                        <div class="book-pages">
+                            <div class="page page-1"></div>
+                            <div class="page page-2"></div>
+                            <div class="page page-3"></div>
+                        </div>
+                        <div class="error-number">404</div>
+                    </div>
+
+                    <div class="error-text">
+                        <h1>الصفحة غير موجودة</h1>
+                        <p>يبدو أن الصفحة التي تبحث عنها قد ضاعت بين صفحات الكتب! لكن لا تقلق، لدينا الكثير من الكتب الرائعة التي تنتظرك.</p>
+                    </div>
+
+                    <div class="error-actions">
+                        <a href="index.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-home" style="margin-left: 8px;"></i>
+                            العودة إلى الرئيسية
+                        </a>
+                        <a href="discover.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-search" style="margin-left: 8px;"></i>
+                            اكتشف الكتب
+                        </a>
+                    </div>
+
+                    <!-- اقتراحات سريعة -->
+                    <div class="quick-suggestions">
+                        <h3>ربما تبحث عن:</h3>
+                        <div class="suggestion-links">
+                            <a href="discover.html?q=روايات" class="suggestion-link">
+                                <i class="fas fa-book"></i>
+                                روايات
+                            </a>
+                            <a href="discover.html?q=تطوير الذات" class="suggestion-link">
+                                <i class="fas fa-chart-line"></i>
+                                تطوير الذات
+                            </a>
+                            <a href="discover.html?q=تاريخ" class="suggestion-link">
+                                <i class="fas fa-landmark"></i>
+                                تاريخ
+                            </a>
+                            <a href="discover.html?q=علوم" class="suggestion-link">
+                                <i class="fas fa-flask"></i>
+                                علوم
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اقتباس أدبي -->
+                <div class="literary-quote">
+                    <div class="quote-content">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <p>"لا توجد سفينة أفضل من الكتاب لتأخذك إلى أبعد البقاع"</p>
+                        <cite>- أليسون ماكليود</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 لوميناريا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- خلفية النجوم -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <script src="./js/global.js"></script>
+    <script src="./js/404.js"></script>
+</body>
+</html>
