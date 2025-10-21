@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبتي - لوميناريا</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/my_library.css">
+    <!-- تحسين تحميل الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- تحسين تحميل Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open logo-icon"></i>
+                    <h1>لوميناريا</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="discover.html">اكتشف</a></li>
+                        <li><a href="my_library.html" class="active">مكتبتي</a></li>
+                        <li><a href="about.html">عن لوميناريا</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <a href="account.html" class="btn btn-secondary">تسجيل الدخول</a>
+                    <a href="account.html" class="btn btn-primary">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="page-content">
+        <div class="container">
+            <!-- رأس الصفحة -->
+            <div class="page-header">
+                <h1 class="page-title">مكتبتي الشخصية</h1>
+                <p class="page-subtitle">مجموعتك الشخصية من المغامرات الأدبية</p>
+            </div>
+
+            <!-- كتب PDF كاملة -->
+            <section class="library-section">
+                <h2>كتبي الخاصة - اقرأ واحفظ</h2>
+                <p class="page-subtitle">مجموعة من الكتب الكاملة بصيغة PDF يمكنك تحميلها وقراءتها في أي وقت</p>
+                
+                <div class="pdf-books-grid" id="my-pdf-books">
+                    <!-- الكتب سيتم تحميلها بواسطة JavaScript -->
+                </div>
+                
+                <div class="info-box">
+                    <h4><i class="fas fa-info-circle"></i>معلومة مهمة</h4>
+                    <p>هذه الكتب متاحة للتحميل والقراءة الكاملة. يمكنك حفظها على جهازك والرجوع إليها في أي وقت.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 لوميناريا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- خلفية النجوم -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <script src="./js/global.js"></script>
+    <script src="./js/my_library.js"></script>
+</body>
+</html>
