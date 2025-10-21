@@ -1,0 +1,409 @@
+/* ===== أنماط صفحة الحساب فقط ===== */
+
+.account-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.forms-container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(20px);
+}
+
+/* التبويبات */
+.tabs-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 2rem;
+}
+
+.tab-header {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tab-header.active {
+    background: linear-gradient(135deg, var(--primary-gold), var(--gold-dark));
+    color: var(--bg-dark);
+}
+
+.tab-header:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* النماذج */
+.form-card {
+    width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-title {
+    color: var(--primary-gold);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.form-label {
+    display: block;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-label i {
+    color: var(--primary-gold);
+    width: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Tajawal', sans-serif;
+    text-align: right;
+}
+
+.form-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(251, 191, 36, 0.5);
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+}
+
+.form-input::placeholder {
+    color: var(--text-gray);
+}
+
+/* حقل كلمة المرور */
+.password-input-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: var(--primary-gold);
+}
+
+/* قوة كلمة المرور */
+.password-strength {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-align: right;
+    font-weight: 500;
+}
+
+.password-strength.weak { color: #ef4444; }
+.password-strength.medium { color: #f97316; }
+.password-strength.strong { color: #22c55e; }
+
+/* خيارات النموذج */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4b5563;
+    border-radius: 4px;
+    margin-left: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    color: var(--bg-dark);
+    font-size: 12px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.forgot-password {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--gold-dark);
+    text-decoration: underline;
+}
+
+.terms-link {
+    color: var(--primary-gold);
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* تسجيل الدخول الاجتماعي */
+.social-login {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.social-text {
+    text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.google-btn:hover {
+    border-color: #db4437;
+    color: #db4437;
+}
+
+.facebook-btn:hover {
+    border-color: #4267B2;
+    color: #4267B2;
+}
+
+/* إشعارات الحساب */
+.account-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    color: white;
+    z-index: 1000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(20px);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.account-notification.show {
+    transform: translateX(0);
+}
+
+.account-notification-success {
+    border-color: rgba(34, 197, 94, 0.3);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.account-notification-error {
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.account-notification-info {
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.account-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.account-notification-content i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* ===== التصميم المتجاوب ===== */
+@media (max-width: 768px) {
+    .account-page {
+        padding: 1rem;
+    }
+    
+    .forms-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-header {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .forms-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .tabs-container {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .tab-header {
+        padding: 0.75rem;
+    }
+    
+    .account-notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+    }
+}
+
+/* تحسينات الوصول */
+.form-input:invalid {
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.form-input:valid {
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+/* تأثيرات التركيز */
+.form-group:focus-within .form-label {
+    color: var(--primary-gold);
+}
