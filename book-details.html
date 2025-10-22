@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الكتاب - لوميناريا</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/book-details.css">
+    <!-- تحسين تحميل الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- تحسين تحميل Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open logo-icon"></i>
+                    <h1>لوميناريا</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="discover.html">اكتشف</a></li>
+                        <li><a href="my_library.html">مكتبتي</a></li>
+                        <li><a href="about.html">عن لوميناريا</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <a href="account.html" class="btn btn-secondary">تسجيل الدخول</a>
+                    <a href="account.html" class="btn btn-primary">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="page-content">
+        <div class="container">
+            <!-- سيتم ملء هذا القسم ديناميكياً بواسطة JavaScript -->
+            <div class="book-details-container" id="bookDetailsContainer">
+                <!-- المحتوى سينشئ هنا -->
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 لوميناريا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- خلفية النجوم -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <script src="./js/global.js"></script>
+    <script>
+    // الانتظار حتى يكتمل تحميل الصفحة و GlobalUtils
+    window.addEventListener('load', function() {
+        // تأخير إضافي لضمان جاهزية GlobalUtils
+        setTimeout(function() {
+            var script = document.createElement('script');
+            script.src = './js/book-details.js';
+            document.body.appendChild(script);
+        }, 200);
+    });
+    </script>
+</body>
+</html>
